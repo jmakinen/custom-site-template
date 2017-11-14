@@ -21,6 +21,7 @@ touch ${VVV_PATH_TO_SITE}/log/access.log
 
 if [[ ! -f "${VVV_PATH_TO_SITE}/public_html/index.php" ]]; then
   echo "Downloading Drupal..."
+  cd "${VVV_PATH_TO_SITE}/public_html/"
   wget https://ftp.drupal.org/files/projects/drupal-8.4.2.tar.gz
   tar -x -f drupal-8.4.2.tar.gz -v -z --strip-components=1
 fi
