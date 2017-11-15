@@ -11,7 +11,7 @@ This template will allow you to create a Drupal dev environment using only `vvv-
 # Configuration
 
 ## The minimum required configuration:
-Create (or modify if you have one already) vvv-custom.yml under ~/vagrant-local
+Create (or modify if you have one already) `vvv-custom.yml` under `~/vagrant-local`
 ```
 ---
 sites:
