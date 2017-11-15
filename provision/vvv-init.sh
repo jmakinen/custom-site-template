@@ -26,6 +26,12 @@ if [[ ! -f "${VVV_PATH_TO_SITE}/public_html/index.php" ]]; then
   tar -x -f drupal-8.4.2.tar.gz -v -z 
   mv drupal-8.4.2 public_html
   rm drupal-8.4.2.tar.gz
+  cd ${VVV_PATH_TO_SITE}/public_html
+  composer require drush/drush:dev-master
+  wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/download/0.4.2/drush.phar
+  chmod +x drush.phar
+  sudo mv drush.phar /usr/local/bin/drush
+  
 fi
 
 cp -f "${VVV_PATH_TO_SITE}/provision/vvv-nginx.conf.tmpl" "${VVV_PATH_TO_SITE}/provision/vvv-nginx.conf"
