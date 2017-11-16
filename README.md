@@ -19,6 +19,7 @@ sites:
     repo: https://github.com/jmakinen/custom-site-template
     hosts:
       - drupal.dev
+    nginx_upstream: php71 
 
 utilities:
   core:
@@ -26,6 +27,7 @@ utilities:
     - opcache-status
     - phpmyadmin
     - webgrind
+    - php71
 ```
 
 # Running
